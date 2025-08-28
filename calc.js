@@ -22,9 +22,9 @@ function getTypeEffectivenessMultiplier(attacking, defending1, defending2){
 };
 
 function getAttackAtLevel(baseAttack, iv, level){
-    return (baseAttack + iv) * cpmtable[levels.indexOf(level)];
+    return ((+baseAttack + +iv) * cpmtable[levels.indexOf(level)]);
 };
 
 function simulateDamageOnTarget(movePower, attack, defense, isStab, tem){
-    return (Math.floor((0.5 * movePower * (attack / defense) * (isStab ? 1.2 : 1) * tem1) * 100) / 100).toFixed(2);
+    return Math.round(0.5 * movePower * (attack / defense) * (isStab ? 1.2 : 1) * tem);
 };
