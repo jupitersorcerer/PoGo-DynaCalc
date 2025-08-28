@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>PoGo Dyna Attack comparison</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Refresh Me</h1>
+    <p class="drawText"></p>
+
+    <div class="data-container">
+      <div class="data-box">
+        <p>Mon 1</p>
+        <div><span>Base Atk</span><input type="number" id="attack-input1" class="form-control" value="100" placeholder="100" required></div>
+        <div><span>IV Atk</span><input type="number" id="iv-input1" class="form-control" value="10" min="0" max="15" placeholder="10" required></div>
+        <div><span>Type</span><select name="type-select1" id="type-select1"></select></div>
+        <div><span>STAB</span> <input type="checkbox" id="stab-checkbox1"></div>
+        <div><span>GMAX</span> <input type="checkbox" id="gmax-checkbox1"></div>
+      </div>
+
+      <div class="data-box">
+        <p>Mon 2</p>
+        <div><span>Base Atk</span><input type="number" id="attack-input2" class="form-control" value="100" placeholder="100" required></div>
+        <div><span>IV Atk</span><input type="number" id="iv-input2" class="form-control" value="10" min="0" max="15" placeholder="10" required></div>
+        <div><span>Type</span><select name="type-select1" id="type-select2"></select></div>
+        <div><span>STAB</span> <input type="checkbox" id="stab-checkbox2"></div>
+        <div><span>GMAX</span> <input type="checkbox" id="gmax-checkbox2"></div>
+      </div>
+
+      <div class="data-box">
+        <p>Against</p>
+        <div><span>Type 1</span><select name="defend-type-select1" id="defending-type-select1"></select></div>
+        <div><span>Type 2</span><select name="defend-type-select2" id="defending-type-select2"></select></div>
+        <div><span>Defense</span><input type="number" id="defender-defense-input" class="form-control" value="100" min="1" max="500" placeholder="10" required></div>
+      </div>
+
+      <div class="data-box">
+        <p>Calc</p>
+        <div><span>relative spaced table</span> <input type="checkbox" id="spaced-table-checkbox"></div>
+        <div><button class="calc-button" id="calc-button">Calculate</button></div>
+      </div>
+    </div>
+
+    <div class="data-container" id="table-container">
+        <div class="data-box" id="table-box"></div>
+    </div>
+  </div>
+
+
+  
+  <script src="data.js" charset="utf-8"></script>
+  <script src="calc.js" charset="utf-8"></script>
+  <script src="index.js" charset="utf-8"></script>
+</body>
+
+</html>
