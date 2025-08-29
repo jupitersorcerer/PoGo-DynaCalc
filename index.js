@@ -146,6 +146,10 @@ var calcFunction = function(){
     fillTable();
 };
 
+var switchFont = function(){
+    document.getElementById('body').classList.toggle('stylizedfont');
+};
+
 
 fillTypeDropdown('type-select1');
 fillTypeDropdown('type-select2');
@@ -153,3 +157,4 @@ fillTypeDropdown('defending-type-select1');
 fillTypeDropdown('defending-type-select2');
 
 document.getElementById('calc-button').addEventListener('click', calcFunction);
+document.getElementById('switch-font').addEventListener('click', switchFont);
